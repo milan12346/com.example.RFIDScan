@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.example.RFIDScan"
+        version="0.7.0">
+
+  <name>RFIDScan</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/RFIDScan.js" target="js/RFIDScan.js"/>
+
+  <js-module src="www/RFIDScan.js" name="RFIDScan">
+    <clobbers target="RFIDScan" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="RFIDScan">
+        <param name="android-package" value="com.example.plugin.RFIDScan"/>
+        <preference name="buildArchitecture" default="x86_64" />
+        <preference name="buildArchitecture" default="arm64" />
+        <preference name="buildArchitecture" default="x86" />
+        <preference name="xwalk64bit" value="true" />
+      </feature>
+    </config-file>
+    <!--<source-file src="src/android/olc/uint/AsyncTaskExt.java" target-dir="src/android/olc/uint/" />-->
+    <source-file src="src/android/olc/uint/TxtReader.java" target-dir="src/android/olc/uint/" />
+
+    <source-file src="src/android/olc/mode/readmode.java" target-dir="src/android/olc/mode/" />
+
+    <source-file src="src/android/olc/ScanResultActivity.java" target-dir="src/android/olc/" />
+
+
+    <source-file src="src/android/libs/armeabi/libdevapi.so" target-dir="libs/armeabi" />
+    <source-file src="src/android/libs/armeabi/libSerialPort.so" target-dir="libs/armeabi" />
+    <source-file src="src/android/libs/armeabi/libuhf.so" target-dir="libs/armeabi" />
+
+    <!--<source-file src="src/android/cus/maguhf/App.java" target-dir="src/android/cus/maguhf/" />
+
+    <source-file src="src/android/cus/maguhf/DevBeep.java" target-dir="src/android/cus/maguhf/" />
+    <source-file src="src/android/cus/maguhf/HelpActivity.java" target-dir="src/android/cus/maguhf/" />
+    <source-file src="src/android/cus/maguhf/LockActivity.java" target-dir="src/android/cus/maguhf/" />
+    <source-file src="src/android/cus/maguhf/ReadWriteActivity.java" target-dir="src/android/cus/maguhf/" />
+    <source-file src="src/android/cus/maguhf/SettingActivity.java" target-dir="src/android/cus/maguhf/" />-->
+    <source-file src="src/android/RFIDScan.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/libs/uhf.jar"  target-dir="libs" framework="true"  />
+  </platform>
+
+</plugin>

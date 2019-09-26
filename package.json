@@ -1,0 +1,32 @@
+{
+  "name": "com.example.RFIDScan",
+  "version": "0.8.2",
+  "description": "Native interface to SQLite for PhoneGap/Cordova (core version)",
+  "cordova": {
+    "id": "com.example.RFIDScan",
+    "platforms": [
+      "android" 
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milan12346/com.example.RFIDScan.git"
+  },
+  "keywords": [
+    "sqlite",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.3.0"
+    }
+  ],
+  "author": "various",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milan12346/com.example.RFIDScan/issues"
+  },
+  "homepage": "https://github.com/milan12346/com.example.RFIDScan"
+}
